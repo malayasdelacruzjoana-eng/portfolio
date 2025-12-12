@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - Joana</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: url('b.jpg') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* NAVIGATION BAR - CONTACT STYLE (ORIHINAL NA STYLE, WALANG BINAGO) */
+    .navbar {
+        width: 100%;
+        background: rgba(142, 198, 255, 0.8); /* semi-transparent */
+        padding: 15px 0;
+        text-align: center;
+        backdrop-filter: blur(5px); /* blur effect */
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: #003d66; /* ORIHINAL NA TEXT COLOR NG NAVIGATION */
+        font-size: 18px; /* ORIHINAL NA LAKI NG TEXT */
+        margin: 0 12px; /* ORIHINAL NA DISTANSYA */
+        font-weight: bold; /* ORIHINAL NA BOLD */
+        transition: color 0.3s; /* ORIHINAL NA TRANSITION */
+    }
+
+    .navbar a:hover {
+        color: #ffdd57; /* ORIHINAL NA COLOR SA Hover */
+    }
+
+    /* WELCOME SECTION */
+    .welcome-container {
+        margin-top: 120px; /* adjusted for fixed navbar */
+        text-align: center;
+        animation: fadeIn 2s ease-in-out;
+        color: #fff;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+    }
+
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #fff;
+        margin-bottom: 20px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    .welcome-container h1 {
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+
+    .welcome-container p {
+        font-size: 22px;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+        color: #000; /* NABAGO LANG: Gawing itim ang text ng paragraph */
+        text-shadow: 1px 1px 3px rgba(255,255,255,0.5); /* Dagdag para mas malinaw */
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* RESPONSIVE (ORIHINAL NA STYLE, WALANG BINAGO) */
+    @media screen and (max-width: 600px) {
+        .welcome-container h1 {
+            font-size: 36px;
+        }
+
+        .welcome-container p {
+            font-size: 18px;
+        }
+
+        .navbar a {
+            display: block;
+            margin: 8px 0;
+        }
+
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <!-- NAVIGATION (ORIHINAL NA CONTENT, WALANG BINAGO) -->
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- WELCOME CONTENT -->
+    <div class="welcome-container">
+        <img src="profile.jpg" alt="Joana Profile" class="profile-pic">
+        <h1>Welcome to My World!</h1>
+        <p>Hi there! I'm Joana. Thanks for visiting my personal website. 
+           Feel free to explore and learn more about me, my projects, skills, and thoughts.</p>
+    </div>
+
+</body>
+</html>

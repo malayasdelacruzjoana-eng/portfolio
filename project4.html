@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Form</title>
+    <style>
+        body {
+            background-color: #87CEFA;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            background-color: #E5D3B3;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        .qty-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .qty-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+            font-size: 18px;
+        }
+        .minus-button {
+            background-color: #f44336;
+        }
+        #receipt {
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid black;
+            background-color: #fff;
+            white-space: pre-wrap;
+        }
+        label, input {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<h2>Order Form</h2>
+
+<h3>Customer Information:</h3>
+<label for="customerName">Name:</label>
+<input type="text" id="customerName"><br><br>
+
+<label for="customerNumber">Number:</label>
+<input type="tel" id="customerNumber"><br><br>
+
+<label for="email">Email:</label>
+<input type="email" id="email"><br><br>
+
+<label for="deliveryDate">Delivery Date:</label>
+<input type="date" id="deliveryDate"><br><br>
+
+<table>
+    <tr>
+        <th>Picture</th>
+        <th>Item</th>
+        <th>Price (₱)</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+    </tr>
+
+    <tr>
+        <td><img src="Spaghetti.jpg" width="80"></td>
+        <td>Spaghetti</td>
+        <td><input type="number" id="p1" value="100" readonly></td>
+        <td>
+            <div class="qty-container">
+                <button class="qty-button minus-button" onclick="decreaseQty('q1')">-</button>
+                <input type="number" id="q1" value="0" min="0">
+                <button class="qty-button" onclick="increaseQty('q1')">+</button>
+            </div>
+        </td>
+        <td id="s1">0</td>
+    </tr>
+
+    <tr>
+        <td><img src="refreshing .jpg" width="80"></td>
+        <td>Refreshing</td>
+        <td><input type="number" id="p2" value="35" readonly></td>
+        <td>
+            <div class="qty-container">
+                <button class="qty-button minus-button" onclick="decreaseQty('q2')">-</button>
+                <input type="number" id="q2" value="0" min="0">
+                <button class="qty-button" onclick="increaseQty('q2')">+</button>
+            </div>
+        </td>
+        <td id="s2">0</td>
+    </tr>
+
+    <tr>
+        <td><img src="burger.jpg" width="80"></td>
+        <td>Hamburger</td>
+        <td><input type="number" id="p3" value="55" readonly></td>
+        <td>
+            <div class="qty-container">
+                <button class="qty-button minus-button" onclick="decreaseQty('q3')">-</button>
+                <input type="number" id="q3" value="0" min="0">
+                <button class="qty-button" onclick="increaseQty('q3')">+</button>
+            </div>
+        </td>
+        <td id="s3">0</td>
+    </tr>
+
+    <tr>
+        <td><img src="french-fries.jpg" width="80"></td>
+        <td>French Fries</td>
+        <td><input type="number" id="p4" value="45" readonly></td>
+        <td>
+            <div class="qty-container">
+                <button class="qty-button minus-button" onclick="decreaseQty('q4')">-</button>
+                <input type="number" id="q4" value="0" min="0">
+                <button class="qty-button" onclick="increaseQty('q4')">+</button>
+            </div>
+        </td>
+        <td id="s4">0</td>
+    </tr>
+</table>
+
+<br>
+<h3>Total: ₱ <span id="total">0</span></h3>
+
+<h3>Payment Method:</h3>
+<input type="radio" id="cash" name="payment" value="Cash" checked>
+<label for="cash">Cash</label>
+<input type="radio" id="credit" name="payment" value="Credit Card">
+<label for="credit">Credit Card</label>
+<input type="radio" id="gcash" name="payment" value="GCash">
+<label for="gcash">GCash</label><br><br>
+
+<input type="checkbox" id="delivery" name="delivery" value="yes">
+<label for="delivery">Delivery? (₱50 fee)</label><br><br>
+
+Amount Paid: <input type="number" id="paid" value="0"><br><br>
+
+Change: ₱ <span id="change">0</span><br><br>
+
+<button onclick="submitOrder()">Submit Order</button>
+
+<div id="receipt">
+<h3>Receipt</h3>
+<pre id="receiptContent">Your receipt will appear here...</pre>
+</div>
+
+<script>
+function increaseQty(qtyId) {
+    let qtyInput = document.getElementById(qtyId);
+    qtyInput.value = Number(qtyInput.value) + 1;
+}
+
+function decreaseQty(qtyId) {
+    let qtyInput = document.getElementById(qtyId);
+    if (Number(qtyInput.value) > 0) {
+        qtyInput.value = Number(qtyInput.value) - 1;
+    }
+}
+
+function calculate() {
+    let p1 = Number(document.getElementById("p1").value);
+    let q1 = Number(document.getElementById("q1").value);
+    let s1 = p1 * q1;
+    document.getElementById("s1").innerText = s1;
+
+    let p2 = Number(document.getElementById("p2").value);
+    let q2 = Number(document.getElementById("q2").value);
+    let s2 = p2 * q2;
+    document.getElementById("s2").innerText = s2;
+
+    let p3 = Number(document.getElementById("p3").value);
+    let q3 = Number(document.getElementById("q3").value);
+    let s3 = p3 * q3;
+    document.getElementById("s3").innerText = s3;
+
+    let p4 = Number(document.getElementById("p4").value);
+    let q4 = Number(document.getElementById("q4").value);
+    let s4 = p4 * q4;
+    document.getElementById("s4").innerText = s4;
+
+    let total = s1 + s2 + s3 + s4;
+
+    if (document.getElementById("delivery").checked) {
+        total += 50;
+    }
+
+    document.getElementById("total").innerText = total;
+
+    let paid = Number(document.getElementById("paid").value);
+    let change = paid - total;
+    document.getElementById("change").innerText = change;
+
+    return { total, change };
+}
+
+function submitOrder() {
+    let { total, change } = calculate();
+
+    let name = document.getElementById("customerName").value || "N/A";
+    let number = document.getElementById("customerNumber").value || "N/A";
+    let email = document.getElementById("email").value || "N/A";
+    let deliveryDate = document.getElementById("deliveryDate").value || "N/A";
+
+    let items = [
+        {name: "Spaghetti", qty: Number(document.getElementById("q1").value), price: Number(document.getElementById("p1").value)},
+        {name: "Refreshing", qty: Number(document.getElementById("q2").value), price: Number(document.getElementById("p2").value)},
+        {name: "Hamburger", qty: Number(document.getElementById("q3").value), price: Number(document.getElementById("p3").value)},
+        {name: "French Fries", qty: Number(document.getElementById("q4").value), price: Number(document.getElementById("p4").value)}
+    ];
+
+    let receiptText = `Customer Name: ${name}\nNumber: ${number}\nEmail: ${email}\nDelivery Date: ${deliveryDate}\n\n`;
+    receiptText += "Items:\n";
+
+    items.forEach(item => {
+        if(item.qty > 0){
+            let subtotal = item.qty * item.price;
+            receiptText += `${item.name} x ${item.qty} = ₱${subtotal}\n`;
+        }
+    });
+
+    if (document.getElementById("delivery").checked) {
+        receiptText += "Delivery Fee: ₱50\n";
+    }
+
+    let paid = Number(document.getElementById("paid").value);
+
+    receiptText += `\nTotal: ₱${total}\n`;
+    receiptText += `Amount Paid: ₱${paid}\n`;
+    receiptText += `Change: ₱${change}\n`;
+
+    let payment = document.querySelector('input[name="payment"]:checked').value;
+    receiptText += `Payment Method: ${payment}\n`;
+
+    document.getElementById("receiptContent").innerText = receiptText;
+}
+</script>
+</body>
+</html>

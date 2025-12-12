@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joana's Blog</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('b.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .navbar {
+        background-color: #0077b6;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .blog-container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 10px;
+    }
+
+    h1.section-title {
+        text-align: center;
+        background: #0077b6;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 50px;
+    }
+
+    /* SKY BLUE BORDER + SOFT LIGHTING */
+    .post {
+        background: rgba(255, 255, 255, 0.85);
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+        border: 3px solid #6bb8ff; /* Sky blue border */
+        box-shadow: 0 0 15px #6bb8ff33; /* Soft sky blue glow */
+    }
+
+    video, img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .post h2 {
+        color: #003d66; /* Dark blue headings */
+    }
+
+    .post .date {
+        color: #555;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .post p {
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Slideshow */
+    .slideshow-container {
+        position: relative;
+        margin-top: 20px;
+    }
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        padding: 16px;
+        color: white;
+        font-size: 18px;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 3px;
+        transform: translateY(-50%);
+        user-select: none;
+    }
+    .next { right: 0; }
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+    .slide {
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="projects.html">Projects</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<div class="blog-container">
+
+    <!-- CHURCH SECTION -->
+    <h1 class="section-title">Church</h1>
+    <div class="post">
+        <h2>Church</h2>
+        <div class="slideshow-container" id="churchSlides">
+            <div class="slide churchSlide"><img src="c1.jpeg"></div>
+            <div class="slide churchSlide"><img src="c2.jpeg"></div>
+            <div class="slide churchSlide"><img src="c3.jpeg"></div>
+            <div class="slide churchSlide"><img src="c4.jpeg"></div>
+            <div class="slide churchSlide"><img src="c5.jpeg"></div>
+            <a class="prev" onclick="plusChurchSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusChurchSlides(1)">&#10095;</a>
+        </div>
+        <p>In the midst of life’s challenges and trials, let us never forget God, who is always with us. Even when situations become difficult, His guidance and care remain, and He never abandons us. Our faith in Him gives us strength and hope each day, reminding us that no matter what happens, His love and protection never change. By trusting in God, we become stronger and learn to appreciate every blessing that comes our way.</p>
+    </div>
+
+    <!-- FAMILY SECTION -->
+    <h1 class="section-title">👨‍👩‍👧 My Family Moment</h1>
+    <div class="post">
+        <h2>Family Bonding</h2>
+        <img src="fam.jpeg" alt="Family Picture">
+        <p>Family is the first home of our hearts—a place where we find real love, understanding, and support. No matter what challenges come our way, they give us the strength to keep going and the comfort to stay grounded. In every laugh, every story shared, and every simple moment spent together, we’re reminded of how precious and irreplaceable family truly is.</p>
+    </div>
+
+    <!-- KITTENS SECTION -->
+    <h1 class="section-title">🐱 My Cute Kittens</h1>
+    <div class="post">
+        <h2>Playtime ng mga Kiting</h2>
+        <div class="date">Published: Dec 2025</div>
+        <video controls>
+            <source src="kuting1.mp4" type="video/mp4">
+        </video>
+        <p>For me, cats really help take away stress. Even when they’re not doing anything, their presence alone makes me feel lighter. I love watching them sleep or play because it instantly calms me down and makes my day better. They may

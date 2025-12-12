@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Joana</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('b.jpg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+        .navbar {
+            width: 100%;
+            background: rgba(142, 198, 255, 0.8);
+            padding: 15px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #003d66;
+            font-size: 18px;
+            margin: 0 12px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #ffdd57;
+        }
+        .contact-container {
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-top: 50px;
+            color: #003d66;
+        }
+        h1 {
+            color: #003d66;
+            margin-bottom: 25px;
+            font-size: 32px;
+        }
+        p {
+            font-size: 18px;
+            margin: 15px 0;
+            line-height: 1.7;
+        }
+        /* DARK BLUE LABELS */
+        .contact-container p strong {
+            color: #003d66;
+        }
+        /* SKY BLUE LINKS */
+        .contact-container a {
+            color: #6bb8ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-container a:hover {
+            text-decoration: underline;
+        }
+        hr {
+            border: none;
+            height: 1px;
+            background: #ddd;
+            margin: 25px 0;
+        }
+        @media (max-width: 600px) {
+            .navbar a {
+                display: inline-block;
+                margin: 0 10px;
+            }
+            .contact-container {
+                margin: 30px 20px;
+                padding: 25px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <hr>
+        <p><strong>Email:</strong><br>
+            <a href="mailto:malayasdelacruzjoana@gmail.com">
+                malayasdelacruzjoana@gmail.com
+            </a>
+        </p>
+        <p><strong>Facebook:</strong><br>
+            <a href="https://www.facebook.com/joana.delacruz.3781995" target="_blank">
+                Joana Dela Cruz
+            </a>
+        </p>
+        <p><strong>Instagram:</strong><br>
+            <a href="https://www.instagram.com/itsmejoana2269" target="_blank">
+                itsmejoana
+            </a>
+        </p>
+        <p><strong>Mobile Number:</strong><br>
+            <a href="tel:09567643491">09567643491</a>
+        </p>
+    </div>
+</body>
+</html>

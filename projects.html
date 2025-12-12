@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Projects</title>  
+    <style>  
+        body {  
+            margin: 0;  
+            padding: 0; 
+            font-family: Arial, sans-serif;  
+            background: url('b.jpg') no-repeat center center fixed; 
+            background-size: cover; 
+            text-align: center;  
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }  
+
+        /* NAVIGATION - SAME STYLE SA IBA PANG PAGES */
+        .navbar {
+            width: 100%;
+            background: rgba(142, 198, 255, 0.8);
+            padding: 15px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #003d66;
+            font-size: 18px;
+            margin: 0 12px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffdd57;
+        }
+  
+        h1 {  
+            margin-top: 50px; 
+            color: #0c3c68; 
+            font-size: 45px;  
+            font-weight: 900;  
+            letter-spacing: 2px;  
+        }  
+  
+        /* PROJECT BOX STYLE - SKY BLUE BORDER + LIGHTING */
+        .project-card {  
+            background: #ffffff;  
+            width: 75%;  
+            max-width: 900px;  
+            margin: 25px auto;  
+            padding: 25px;  
+            border-radius: 25px;  
+            border: 5px solid #6bb8ff; /* Sky blue border */
+            box-shadow: 0 0 25px #6bb8ff; /* Sky blue lighting/glow */
+        }
+
+        /* WALANG BORDER AT SHADOW ANG PICTURE */
+        .project-card img {
+            border: none;
+            box-shadow: none;
+            border-radius: 10px;
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+  
+        .project-card h2 {  
+            margin: 0;  
+            font-size: 28px;  
+            color: #0c3c68;  
+        }  
+  
+        .project-card p {  
+            margin: 12px 0 20px;  
+            font-size: 18px;  
+            color: #2c587e;  
+        }  
+  
+        .btn {  
+            background: #3293ff;   
+            color: #fff;  
+            padding: 12px 25px;  
+            border-radius: 12px;  
+            font-size: 18px;  
+            text-decoration: none;  
+            display: inline-block;  
+            font-weight: bold;  
+            transition: 0.3s;  
+        }  
+  
+        .btn:hover {  
+            background: #0e6cd1;  
+        }  
+
+        /* RESPONSIVE */
+        @media screen and (max-width: 600px) {
+            .navbar a {
+                display: inline-block;
+                margin: 0 10px;
+            }
+
+            h1 {
+                font-size: 38px;
+                margin-top: 30px;
+            }
+
+            .project-card {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .project-card h2 {
+                font-size: 24px;
+            }
+
+            .project-card p {
+                font-size: 16px;
+            }
+        }
+    </style>  
+</head>  
+<body>  
+    <!-- NAVIGATION -->
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <h1>PROJECT</h1>  
+
+    <div class="project-card">  
+        <h2>Project 1</h2>  
+        <p>STORY.</p>  
+        <a href="project1.html" class="btn">View Project</a>  
+    </div>  
+
+    <div class="project-card">  
+        <h2>Project 2</h2>  
+        <p>RECIPE.</p>  
+        <a href="project2.html" class="btn">View Project</a>  
+    </div>  
+
+    <div class="project-card">  
+        <h2>Project 3</h2>  
+        <p>ORDER FORM.</p>  
+        <a href="project3.html" class="btn">View Project</a>  
+    </div>  
+
+    <div class="project-card">  
+        <h2>Project 4</h2>  
+        <p>ORDER FORM WITH RECEIPT.</p>  
+        <a href="project4.html" class="btn">View Project</a>  
+    </div>  
+
+    <div class="project-card">  
+        <h2>Project 5</h2>  
+        <p>BICYCLE</p>  
+        <a href="project5.html" class="btn">View Project</a>  
+    </div>  
+</body>  
+</html>

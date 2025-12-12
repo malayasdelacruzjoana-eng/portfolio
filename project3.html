@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <style>
+        body {
+            background-color: #87CEFA;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            background-color: #E5D3B3;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        input[type="text"], input[type="tel"], input[type="email"], input[type="date"], input[type="number"] {
+            width: 200px;
+            padding: 5px;
+            text-align: left;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Order Form</h2>
+
+<form action="#" method="post">
+
+    <div class="form-section">
+        <h3>Customer Information:</h3>
+        <label for="customerName">Name:</label>
+        <input type="text" id="customerName" name="customerName" required><br><br>
+
+        <label for="customerNumber">Number:</label>
+        <input type="tel" id="customerNumber" name="customerNumber" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="deliveryDate">Delivery Date:</label>
+        <input type="date" id="deliveryDate" name="deliveryDate" required>
+    </div>
+
+    <div class="form-section">
+        <table>
+            <tr>
+                <th>Picture</th>
+                <th>Item</th>
+                <th>Price (₱)</th>
+                <th>Quantity</th>
+            </tr>
+
+            <tr>
+                <td><img src="Spaghetti.jpg" width="80" alt="Spaghetti"></td>
+                <td>Spaghetti</td>
+                <td>₱100</td>
+                <td><input type="text" name="q1" value="0"></td>
+            </tr>
+
+            <tr>
+                <td><img src="
+                refreshing .jpg" width="80" alt="Refreshing"></td>
+                <td>Refreshing</td>
+                <td>₱35</td>
+                <td><input type="text" name="q2" value="0"></td>
+            </tr>
+
+            <tr>
+                <td><img src="burger.jpg" width="80" alt="Hamburger"></td>
+                <td>Hamburger</td>
+                <td>₱55</td>
+                <td><input type="text" name="q3" value="0"></td>
+            </tr>
+
+            <tr>
+                <td><img src="french-fries.jpg" width="80" alt="French Fries"></td>
+                <td>French Fries</td>
+                <td>₱45</td>
+                <td><input type="text" name="q4" value="0"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="form-section">
+        <h3>Payment Method:</h3>
+        <input type="radio" id="cash" name="payment" value="Cash" checked>
+        <label for="cash">Cash</label>
+        <input type="radio" id="credit" name="payment" value="Credit Card">
+        <label for="credit">Credit Card</label>
+        <input type="radio" id="gcash" name="payment" value="GCash">
+        <label for="gcash">GCash</label><br><br>
+
+        <input type="checkbox" id="delivery" name="delivery" value="yes">
+        <label for="delivery">Delivery? (₱50 fee)</label><br><br>
+
+        <label for="paid">Amount Paid:</label>
+        <input type="text" id="paid" name="paid" value="0"><br><br>
+
+        <label for="change">Change:</label>
+        <input type="text" id="change" name="change" value="0"><br><br>
+    </div>
+
+    <button type="submit">Submit Order</button>
+
+</form>
+
+</body>
+</html>
